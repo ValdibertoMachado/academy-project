@@ -1,20 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Loading } from './src/components/Loading';
+import { View, StyleSheet } from 'react-native';
+import { AuthenticationRoutes } from '../app/src/routes/AuthenticationRoutes'
+import { AppRoutes } from '../app/src/routes/AppRoutes'
+import React from 'react';
 
-export default function App() {
+
+type Props = {
+  value: Boolean
+}
+
+export default function App({ value }: Props) {
+  const Value = {value}
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    
+    <View style={styles.view}>
+      
+     {value
+     ?
+     <AuthenticationRoutes/>
+     :
+     <Loading/>
+     }
     </View>
-  );
+    
+     );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  view:{
+      flex:1,
+      backgroundColor:'gray',
   },
-});
+})
+
+
