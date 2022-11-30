@@ -10,14 +10,13 @@ type Props = {
 }
 
 export default function App({ value }: Props) {
-  const Value = {value}
   return (
     
     <View style={styles.view}>
       
      {value
      ?
-     <AuthenticationRoutes/>
+     <AppRoutes/>
      :
      <Loading/>
      }

@@ -9,14 +9,14 @@ const Stack = createNativeStackNavigator()
 
 export function AuthenticationRoutes(){
     return(
-      <view style={styles.view}>
+      < View style={styles.view}>
         <NavigationContainer>
       <Stack.Navigator initialRouteName="SignUp" screenOptions={{headerShown:false}}>
         <Stack.Screen name="Singnin" component={Singnin} />
         <Stack.Screen name="SignUp" component={SignUp} />
       </Stack.Navigator>
     </NavigationContainer>
-    </view>
+    </View>
     )
 }
 

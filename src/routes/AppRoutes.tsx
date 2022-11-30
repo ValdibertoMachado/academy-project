@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 export function AppRoutes(){
 
     return(
-      <view style={styles.view}>
+      <View style={styles.view}>
         <NavigationContainer>
       <Tab.Navigator  initialRouteName="History"  screenOptions={{tabBarLabelStyle:{fontSize: 15, fontWeight: 'bold'} , tabBarStyle: {backgroundColor: 'gray',},tabBarActiveTintColor: 'springgreen', tabBarInactiveTintColor: 'black' ,headerShown:false, tabBarActiveBackgroundColor: 'lightseagreen'}}>
         <Tab.Screen  name="Home" component={Home} options={{tabBarIcon: ({color,}) => <IconMaterialIcons color={color} size={30} name="home"/>}}/>
@@ -22,7 +22,7 @@ export function AppRoutes(){
         <Tab.Screen name="Exercise" component={Exercise} options={{tabBarButton:() => null,tabBarIcon: () => <IconMaterialIcons name="model-training"/>}}/>
       </Tab.Navigator>
     </NavigationContainer>
-    </view>
+    </View>
     )
 }
 
